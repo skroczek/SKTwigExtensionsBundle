@@ -1,0 +1,25 @@
+parameters:
+
+
+services:
+# The following services are added to the ServiceContainer in the SKTwigExtensionsExtension class when they are enabled
+# in the BundleConfiguration.
+
+#    sk.format.twig_extension:
+#        class: SK\TwigExtensionsBundle\Twig\FormatTwigExtension
+#        public: false
+#        tags:
+#            - { name: twig.extension }
+
+#    sk.routing_extra.twig_extension:
+#        class: SK\TwigExtensionsBundle\Twig\RoutingExtraTwigExtension
+#        arguments: ["@router"]
+#        public: false
+#        tags:
+#            - { name: twig.extension }
+
+#    sk.util.twig_extension:
+#        class: SK\TwigExtensionsBundle\Twig\UtilTwigExtension
+#        public: false
+#        tags:
+#            - { name: twig.extension }

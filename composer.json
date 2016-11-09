@@ -1,0 +1,38 @@
+{
+    "name": "sk/twig-extensions-bundle",
+    "description": "Some useful twig extensions",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Kroczek",
+            "email": "sk@xbug.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/framework-bundle": "^2.7 || ^3.0",
+        "symfony/twig-bundle": "^2.7 || ^3.0"
+    },
+    "require-dev": {
+        "symfony/routing": "^2.7 || ^3.0",
+        "phpunit/phpunit": "~4.8|~5.0",
+        "friendsofphp/php-cs-fixer": "^1.11"
+    },
+    "suggest": {
+        "symfony/routing": "Needed when using RoutingExtraTwigExtension"
+    },
+    "autoload": {
+        "psr-4": {
+            "SK\\TwigExtensionsBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SK\\TwigExtensionBundle\\Tests\\": "Tests/"
+        }
+    }
+}
