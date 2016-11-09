@@ -43,7 +43,7 @@ class RoutingExtraTwigExtension extends \Twig_Extension
 
         $attrString = '';
         foreach ($attr as $i => $a) {
-            $attrString .= ' '.$i.'="'.(is_array($a) ? join(' ', $a) : $a).'"';
+            $attrString .= ' '.$i.'="'.(is_array($a) ? implode(' ', $a) : $a).'"';
         }
 
         return sprintf('<a%s>%s</a>', $attrString, $text);
