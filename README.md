@@ -1,22 +1,26 @@
-Installation
-============
+SKTwigExtensionsBundle
+======================
 
-Step 1: Download the Bundle
----------------------------
+[![Build Status](https://api.travis-ci.org/skroczek/SKTwigExtensionsBundle.svg?branch=master)](https://travis-ci.org/skroczek/SKTwigExtensionsBundle)
+
+Installation
+------------
+
+### Step 1: Download the Bundle
+
 
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require sk/twig-extensions-bundle "~1"
+$ composer require sk/twig-extensions-bundle
 ```
 
 This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
-Step 2: Enable the Bundle
--------------------------
+### Step 2: Enable the Bundle
 
 Then, enable the bundle by adding it to the list of registered bundles
 in the `app/AppKernel.php` file of your project:
@@ -43,8 +47,8 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Activate the extensions you want
---------------------------------------
+### Step 3: Activate the extensions you want
+
 By default all extensions are disabled. But you can easily activate the extensions you want:
 
 ```yml
@@ -56,12 +60,11 @@ sk_twig_extensions:
 ```
 
 What you will get
-=================
+-----------------
 
 You will get a short set of useful and handy twig functions and filter. For more information and examples follow the links. 
 
-Included Extensions
--------------------
+### Included Extensions
 
 * [Format Extension](Resources/doc/FormatExtension.md)
   * *Filter*
