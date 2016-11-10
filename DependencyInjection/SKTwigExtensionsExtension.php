@@ -51,7 +51,7 @@ class SKTwigExtensionsExtension extends Extension
         if ($enableFormatExtension) {
             $container->register(
                 'sk.format.twig_extension',
-                '\SK\TwigExtensionsBundle\Twig\FormatTwigExtension'
+                'SK\TwigExtensionsBundle\Twig\FormatTwigExtension'
             )
                 ->setPublic(false)
                 ->addTag('twig.extension');
@@ -60,7 +60,7 @@ class SKTwigExtensionsExtension extends Extension
         if ($enableRoutingExtraExtension) {
             $container->register(
                 'sk.routing_extra.twig_extension',
-                '\SK\TwigExtensionsBundle\Twig\RoutingExtraTwigExtension'
+                'SK\TwigExtensionsBundle\Twig\RoutingExtraTwigExtension'
             )
                 ->setPublic(false)
                 ->addTag('twig.extension');
@@ -69,7 +69,7 @@ class SKTwigExtensionsExtension extends Extension
         if ($enableUtilExtension) {
             $container->register(
                 'sk.util.twig_extension',
-                '\SK\TwigExtensionsBundle\Twig\UtilTwigExtension'
+                'SK\TwigExtensionsBundle\Twig\UtilTwigExtension'
             )
                 ->setPublic(false)
                 ->addTag('twig.extension');
