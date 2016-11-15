@@ -52,7 +52,7 @@ class FormatTwigExtension extends \Twig_Extension
      * Format bytes automatic into a more human readable format with units (kB/KiB, MB/MiB, ... , ZB/ZiB, YB/YiB).
      *
      * @param int|float $bytes
-     * @param bool      $si     Default: false
+     * @param bool      $si    Default: false
      *
      * @return string
      */
