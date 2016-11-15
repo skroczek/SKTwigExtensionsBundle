@@ -83,15 +83,13 @@ class FormatTwigExtensionTest extends \PHPUnit_Framework_TestCase
         return array(
             array(0, false, '0 B'),
             array(0, true, '0 B'),
-            // 1000 B => 0.9765625 KiB => 1.0 KiB
-            array(1000, false, '1.0 KiB'),
+            // 1000 B < 1024 B => 1000 B
+            array(1000, false, '1000 B'),
             // 1000 B => 1 kB => 1.0 kB
             array(1000, true, '1.0 kB'),
             // 1024 B => 1 KiB => 1.0 KiB
             array(1024, false, '1.0 KiB'),
             // 1024 B => 1 KiB => 1.0 KiB
-            array(1000, false, '1.0 KiB'),
-            // 1024 b => 1.024 kB => 1.0 Kb
             array(1024, true, '1.0 kB'),
             // 1996 B => 1.94921875 KiB => 1.9 KiB
             array(1996, false, '1.9 KiB'),
@@ -101,26 +99,26 @@ class FormatTwigExtensionTest extends \PHPUnit_Framework_TestCase
             array(2048, false, '2.0 KiB'),
             // 2048 B => 2.048 kB => 2.0 kB
             array(2048, true, '2.0 kB'),
-            // 2050 B => 2.050 kB => 2.1 kB
-            array(2050, true, '2.1 kB'),
+            // 2050 B => 2.050 kB => 2.0 kB
+            array(2050, true, '2.0 kB'),
             // 2099 B => 2.0498046875 KiB => 2.0 KiB
             array(2099, false, '2.0 KiB'),
             // 2100 B => 2.05078125 KiB => 2.1 KiB
             array(2100, false, '2.1 KiB'),
-            // 1048575 B => 1023.9990234375 KiB ~> 1.0 MiB
-            array(1048575, false, '1.0 MiB'),
+            // 1048575 B => 1023.9990234375 KiB => 1024.0 KiB
+            array(1048575, false, '1024.0 KiB'),
             // 1048576 B => 1 MiB => 1.0 MiB
             array(1048576, false, '1.0 MiB'),
             // 1048576 B => 1,048576 MB => 1.0 MB
             array(1048576, true, '1.0 MB'),
-            // 1073741823 B => 1023.9999990463 MiB ~> 1.0 GiB
-            array(1073741823, false, '1.0 GiB'),
+            // 1073741823 B => 1023.9999990463 MiB => 1024.0 GiB
+            array(1073741823, false, '1024.0 MiB'),
             // 1073741824 B => 1 GiB => 1.0 GiB
             array(1073741824, false, '1.0 GiB'),
             // 1073741824 B => 1.073741824 GB => 1.1 GB
             array(1073741824, true, '1.1 GB'),
-            // 1099511627775 B => 1023.9999999991 MiB ~> 1.0 TiB
-            array(1099511627775, false, '1.0 TiB'),
+            // 1099511627775 B => 1023.9999999991 MiB => 1024.0 GiB
+            array(1099511627775, false, '1024.0 GiB'),
             // 1099511627776 B => 1 TiB => 1.0 TiB
             array(1099511627776, false, '1.0 TiB'),
             // 1099511627776 B => 1.099511627776 TB => 1.1 TB

@@ -53,21 +53,20 @@ class FormatTwigExtension extends \Twig_Extension
      *
      * @param int|float $bytes
      * @param bool      $si     Default: false
-     * @param bool      $strict Default: false
      *
      * @return string
      */
-    public function formatBytes($bytes, $si = false, $strict = false)
+    public function formatBytes($bytes, $si = false)
     {
         $unit = $si ? 1000 : 1024;
-        if ($bytes < ($strict ? $unit : 1000)) {
+        if ($bytes < $unit) {
             return $bytes.' B';
         }
-        $exp = intval(round(log($bytes) / log($unit)));
+        $exp = intval(log($bytes) / log($unit));
         $pre = ($si ? 'kMGTPEZY' : 'KMGTPEZY');
         $pre = $pre[$exp - 1].($si ? '' : 'i');
 
-        return sprintf('%.1f %sB', round($bytes / pow($unit, $exp), 1), $pre);
+        return sprintf('%.1f %sB', ($bytes / pow($unit, $exp)), $pre);
     }
 
     /**
