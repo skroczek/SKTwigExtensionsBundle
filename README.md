@@ -1,7 +1,7 @@
 SKTwigExtensionsBundle
 ======================
 
-[![Build Status](https://api.travis-ci.org/skroczek/SKTwigExtensionsBundle.svg?branch=master)](https://travis-ci.org/skroczek/SKTwigExtensionsBundle)
+[![Build Status](https://api.travis-ci.org/skroczek/SKTwigExtensionsBundle.svg?branch=master)](https://travis-ci.org/skroczek/SKTwigExtensionsBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/188ea27b-9694-4712-8782-e80596550065/mini.png)](https://insight.sensiolabs.com/projects/188ea27b-9694-4712-8782-e80596550065) [![Coverage Status](https://coveralls.io/repos/github/skroczek/SKTwigExtensionsBundle/badge.svg?branch=master)](https://coveralls.io/github/skroczek/SKTwigExtensionsBundle?branch=master)
 
 Installation
 ------------
