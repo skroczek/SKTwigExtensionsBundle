@@ -9,6 +9,7 @@
             "email": "sk@xbug.de"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
         "symfony/framework-bundle": "^2.7 || ^3.0",
         "symfony/twig-bundle": "^2.7 || ^3.0"
