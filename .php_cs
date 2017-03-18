@@ -30,6 +30,7 @@ return Symfony\CS\Config\Config::create()
         'php_unit_construct',
         'php_unit_strict',
         '-phpdoc_no_empty_return',
+        '-phpdoc_var_without_name',
     ))
     ->setUsingCache(true)
     ->finder($finder)
