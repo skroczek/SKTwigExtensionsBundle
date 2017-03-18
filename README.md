@@ -57,6 +57,7 @@ sk_twig_extensions:
         format_extension: true
         routing_extra_extension: true
         util_extension: true
+        string_extension: true
 ```
 
 What you will get
@@ -80,7 +81,14 @@ You will get a short set of useful and handy twig functions and filter. For more
   * *Filter*
     * [each](Resources/doc/UtilExtension.md#filter-each)
     * [warp](Resources/doc/UtilExtension.md#filter-wrap)
-    
+* [String Extension](Resources/doc/StringExtension.md)
+  * *Functions*
+    * [ucfirst](Resources/doc/StringExtension.md#function-ucfirst)
+    * [lcfirst](Resources/doc/StringExtension.md#function-lcfirst)
+  * *Filter*
+    * [ucfirst](Resources/doc/StringExtension.md#filter-ucfirst)
+    * [lcfirst](Resources/doc/StringExtension.md#filter-lcfirst) 
+
 License
 ==========
 

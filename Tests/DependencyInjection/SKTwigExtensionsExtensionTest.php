@@ -31,6 +31,7 @@ class SKTwigExtensionsExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertNotHasDefinition('sk.format.twig_extension');
         $this->assertNotHasDefinition('sk.routing_extra.twig_extension');
         $this->assertNotHasDefinition('sk.util.twig_extension');
+        $this->assertNotHasDefinition('sk.string.twig_extension');
     }
 
     public function testAllEnabledConfiguration()
@@ -44,10 +45,12 @@ class SKTwigExtensionsExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertHasDefinition('sk.format.twig_extension');
         $this->assertHasDefinition('sk.routing_extra.twig_extension');
         $this->assertHasDefinition('sk.util.twig_extension');
+        $this->assertHasDefinition('sk.string.twig_extension');
 
         $this->assertDefinitionHasTag('sk.format.twig_extension', 'twig.extension');
         $this->assertDefinitionHasTag('sk.routing_extra.twig_extension', 'twig.extension');
         $this->assertDefinitionHasTag('sk.util.twig_extension', 'twig.extension');
+        $this->assertDefinitionHasTag('sk.string.twig_extension', 'twig.extension');
     }
 
     protected function getEmptyConfig()
@@ -66,6 +69,7 @@ extensions:
     format_extension: true
     util_extension: true
     routing_extra_extension: true
+    string_extension: true
 EOF;
         $parser = new Parser();
 

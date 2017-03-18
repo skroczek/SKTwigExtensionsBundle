@@ -37,6 +37,7 @@ class Configuration implements ConfigurationInterface
                     ->scalarNode('format_extension')->cannotBeEmpty()->defaultFalse()->end()
                     ->scalarNode('routing_extra_extension')->cannotBeEmpty()->defaultFalse()->end()
                     ->scalarNode('util_extension')->cannotBeEmpty()->defaultFalse()->end()
+                    ->scalarNode('string_extension')->cannotBeEmpty()->defaultFalse()->end()
                 ->end()
 
             ->end()

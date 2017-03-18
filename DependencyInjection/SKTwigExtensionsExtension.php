@@ -46,6 +46,8 @@ class SKTwigExtensionsExtension extends Extension
                 $enableUtilExtension = $value;
             } elseif ('routing_extra_extension' === $key) {
                 $enableRoutingExtraExtension = $value;
+            } elseif ('string_extension' === $key) {
+                $enableStringExtension = $value;
             }
         }
 
@@ -72,6 +74,15 @@ class SKTwigExtensionsExtension extends Extension
             $container->register(
                 'sk.util.twig_extension',
                 'SK\TwigExtensionsBundle\Twig\UtilTwigExtension'
+            )
+                ->setPublic(false)
+                ->addTag('twig.extension');
+        }
+
+        if ($enableStringExtension) {
+            $container->register(
+                'sk.string.twig_extension',
+                'SK\TwigExtensionsBundle\Twig\StringTwigExtension'
             )
                 ->setPublic(false)
                 ->addTag('twig.extension');
