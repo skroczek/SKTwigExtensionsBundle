@@ -54,7 +54,7 @@ String to append to value string.
 
 #### Example
 ```twig
-{{ {1024, 1073741824} | each("format_bytes") | each("wrap", "<span>", "</span>") | join(" ") }}
+{{ {1024, 1073741824} | each("format_bytes") | each("wrap", [ "<span>", "</span>" ]) | join(" ") | raw }}
 ```
 ##### Output:
 
