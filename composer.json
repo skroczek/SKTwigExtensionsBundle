@@ -18,7 +18,7 @@
         "symfony/routing": "^2.7 || ^3.0",
         "phpunit/phpunit": "~4.8|~5.0",
         "symfony/phpunit-bridge": "^2.7 || ^3.0",
-        "friendsofphp/php-cs-fixer": "^1.11",
+        "friendsofphp/php-cs-fixer": "^2.0",
         "php-coveralls/php-coveralls": "^2.0"
     },
     "suggest": {

@@ -9,29 +9,32 @@ For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 EOF;
 
-Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
+//PhpCsFixer\Fixer\Comment\HeaderCommentFixer::setHeader($header);
 
-$finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in(array(__DIR__))
+$finder = PhpCsFixer\Finder::create()
+    ->in([__DIR__])
     ->exclude(array('Tests/Fixtures'))
 ;
 
-return Symfony\CS\Config\Config::create()
-    ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
-    ->fixers(array(
-        'combine_consecutive_unsets',
-        'header_comment',
-        'long_array_syntax',
-        'newline_after_open_tag',
-        'no_php4_constructor',
-        'no_useless_else',
-        'ordered_class_elements',
-        'ordered_use',
-        'php_unit_construct',
-        'php_unit_strict',
-        '-phpdoc_no_empty_return',
-        '-phpdoc_var_without_name',
-    ))
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@Symfony' => true,
+        'combine_consecutive_unsets' => true,
+        'header_comment' => [
+                'comment_type' => 'PHPDoc',
+                'header' => $header
+            ],
+        'array_syntax' => ['syntax' => 'long'],
+        'linebreak_after_opening_tag' => true,
+        'no_php4_constructor' => true,
+        'no_useless_else' => true,
+        'ordered_class_elements' => true,
+        'ordered_imports' => true,
+        'php_unit_construct' => true,
+        'php_unit_strict' => true,
+        'phpdoc_no_empty_return' => false,
+        'phpdoc_var_without_name' => false,
+    ])
     ->setUsingCache(true)
-    ->finder($finder)
+    ->setFinder($finder)
 ;
