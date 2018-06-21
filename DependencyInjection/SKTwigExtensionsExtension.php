@@ -56,7 +56,7 @@ class SKTwigExtensionsExtension extends Extension
                 'sk.format.twig_extension',
                 'SK\TwigExtensionsBundle\Twig\FormatTwigExtension'
             )
-                ->setPublic(false)
+                ->setPublic(true)
                 ->addTag('twig.extension');
         }
 
@@ -66,7 +66,7 @@ class SKTwigExtensionsExtension extends Extension
                 'SK\TwigExtensionsBundle\Twig\RoutingExtraTwigExtension'
             )
                 ->addArgument(new Reference('router'))
-                ->setPublic(false)
+                ->setPublic(true)
                 ->addTag('twig.extension');
         }
 
@@ -75,7 +75,7 @@ class SKTwigExtensionsExtension extends Extension
                 'sk.util.twig_extension',
                 'SK\TwigExtensionsBundle\Twig\UtilTwigExtension'
             )
-                ->setPublic(false)
+                ->setPublic(true)
                 ->addTag('twig.extension');
         }
 
@@ -84,7 +84,7 @@ class SKTwigExtensionsExtension extends Extension
                 'sk.string.twig_extension',
                 'SK\TwigExtensionsBundle\Twig\StringTwigExtension'
             )
-                ->setPublic(false)
+                ->setPublic(true)
                 ->addTag('twig.extension');
         }
     }
