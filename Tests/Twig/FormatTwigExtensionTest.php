@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the SKTwigExtensionsBundle package.
  *
  * (c) Sebastian Kroczek <sk@xbug.de>
@@ -143,7 +143,6 @@ class FormatTwigExtensionTest extends \PHPUnit_Framework_TestCase
             array(1208925819614629174706176, false, '1.0 YiB'),
             // 1208925819614629174706176 B => 1.208925819614629174706176 YB => 1.2 YiB
             array(1208925819614629174706176, true, '1.2 YB'),
-
         );
     }
 }

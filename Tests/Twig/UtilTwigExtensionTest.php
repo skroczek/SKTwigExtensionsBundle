@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the SKTwigExtensionsBundle package.
  *
  * (c) Sebastian Kroczek <sk@xbug.de>
@@ -122,9 +122,6 @@ class UtilTwigExtensionTest extends \PHPUnit_Framework_TestCase
  */
 class A
 {
-    /**
-     * {@inheritdoc}
-     */
     public function __toString()
     {
         return 'Hi, I\'m class A. I\'m very talkative. Would you be my friend?';

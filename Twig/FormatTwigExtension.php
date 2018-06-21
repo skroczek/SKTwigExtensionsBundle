@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the SKTwigExtensionsBundle package.
  *
  * (c) Sebastian Kroczek <sk@xbug.de>
@@ -33,7 +33,6 @@ class FormatTwigExtension extends \Twig_Extension
         return array(
             new \Twig_SimpleFilter('format_bytes', array($this, 'formatBytes')),
             new \Twig_SimpleFilter('repeat', 'str_repeat'),
-
         );
     }
 
